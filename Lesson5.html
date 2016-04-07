@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+
+  <body>
+
+
+<!-- EXAMPLE OF JS FUNCTIONALITY
+Ex: Add numbers in buttons (click to add): Function gets called on click
+This is also an example of logging directly to html --> 
+
+Number 1: <input type="text" id="num1">
+Number 2: <input type="text" id="num2">
+
+<button id="add" onclick="addNums()">Click to add</button>
+<br>
+Result:
+<span id="result"></span>
+
+<!-- ALERTS --> 
+<!-- a function that returns a popup window
+do them in the console or in the .js file -->
+
+<script>
+alert("hello!");
+  </script>
+
+<script>
+function catNames(name) {
+  return alert("a good cat name is " + name);
+}
+catNames("Daisy");
+catNames("Ziggy");
+</script>
+<br>
+
+
+<!-- HTML return alert on click -->
+<button onclick="myFunction()">Click Me</button>
+<script>
+function myFunction() {
+alert("I am an alert box!");
+}
+</script>
+
+
+<!-- Logging (writing) directly to HTML -->
+<p id="hello"></p>
+<script>
+alert("Hello World");
+document.getElementById("hello").innerHTML = "Hello World";
+</script>
+
+
+<div onclick="change()" id="zig">I Am A Cat
+</div>
+<script>
+function change(){
+document.getElementById("zig").innerHTML = "My Name Is Ziggy";
+}
+</script>
+
+
+<!-- Arrays -->
+
+<!-- call for ziggy breed, call for sunny age, write to console -->
+<script>
+var ziggy = {age: 1, breed: "flamepoint", tail: "curly"};
+var sunny = {age: 1, breed: "tortie", tail: "straight"};
+console.log(ziggy.breed);
+console.log(sunny.age);
+</script>
+
+
+<!-- call for index 0 in var nancy and write to console -->
+<script>
+var nancy = {
+	lastname: "Goodman", 
+	firstname: "Nancy", 
+	birthday: "November4", 
+	interests: ["Brighton Beach", "Michael Franti"
+	]};
+console.log(nancy.interests[0]);
+</script>
+
+
+<!-- do math and give results on console -->
+<script>
+var num = 100
+if (num < 10) {
+	console.log(num); 
+	console.log ("number is less than 10");
+}else{
+	console.log("number is greater than 10");
+}
+</script>
+
+
+<!-- do math and give results on console -->
+<script>
+var num1 = 13;
+var num2 = 27;
+console.log(num1+num2);
+// or var result = num1 + num2;
+</script>
+
+<!-- write results to console -->
+<script>
+var string1 = "pink and ";
+var string2 = "purple"
+var result = string1 + string2;
+console.log(result);
+</script>
+
+
+<!-- arrayception (multidimensional array) -->
+<script>
+var purebreed = ["persian", "siamese", "oriental"];
+var bigcat = ["jaguar", "tiger", "lion"];
+var cats = [purebreed, bigcat];
+console.log(cats);
+cats[0][1]; 
+// result will be siamese
+cats[1][1]; 
+// result will be tiger
+</script>
+
+
+
+<script>
+var age = 20;
+if(age<21){
+alert("too young");
+}else{
+	alert("enter");
+}
+</script>
+
+
+<script>
+var num1 = 9;
+if(num1<10){
+	alert("less than 10");
+}else{
+	alert("10 or more");
+}
+</script>
+
+
+<!-- Objects -->
+
+<script>
+var ziggy = {age: 1, breed: "flamepoint", tail: "curly"};
+var sunny = {age: 1, breek: "tortie", tail: "straight"};
+// pull out data using dot notation
+console.log(ziggy.breed);
+// pull out data with bracket notation
+console.log(ziggy["age"]);
+</script>
+
+<script>
+var nancy = {
+	lastname: "Goodman", 
+	firstname: "Nancy", 
+	birthday: "November4", 
+	interests: ["Brighton Beach", "Michael Franti"]
+};
+console.log(nancy.interests[0]);
+</script>
+
+
+<!-- LOGIC -->
+
+<!-- Testing -->
+
+<!-- The If statement -->
+<script>
+if(5>10){ 
+  console.log("You'll never see this in the console because 5 is not greater than 10"); 
+}
+if(5<10){ 
+  console.log("But you'll definitely see this"); }
+</script>
+
+
+<script>
+if(5>10){ 
+  console.log("You'll never see this in the console because 5 is not greater than 10"); 
+}
+if(5<10){ 
+  console.log("But you'll definitely see this"); }
+</script>
+
+
+<!-- The else Statement -->
+<script>
+if(5>10){ 
+  console.log("You'll never see this because 5 is not greater than 10"); 
+} else{
+  console.log("You will see this though, since 5 < 10 is false"); 
+}
+</script>
+
+
+<script>
+var num = 100;
+
+if(num<10){
+	console.log("less than 10");
+}else{
+	console.log("number is greater or eq to 10");
+}
+console.log(num);
+</script>
+
+<script>
+var num = 9;
+if (num < 10) {
+	console.log("your number, " + num + " is less than 10");
+}else{
+	console.log("number is greater of eq to 10");
+}
+</script>
+
+
+<script>
+var num = 15;
+
+if (num < 10) {
+console.log("your number, " + num + ", is less than 10");
+} else {
+console.log("your number, " + num + ", is greater or equal to 10");
+} 
+</script>
+
+
+
+<!-- The else if Statement -->
+<script>
+if(5>10){
+   console.log("You'll never see this because 5 is not greater than 10")
+}
+   else if(5===5){
+      console.log("Yes, 5 really is equal to 5, so this will show up in the console") 
+}else{
+     console.log("We won't get here because our else if evaluates to true"); 
+ }
+</script>
+
+<script>
+var age = 30;
+if (age === 2) {
+	console.log("baby");
+}else if (age === 13) {
+	cosole.log("teenager");
+}else {
+	console.log("adult")
+}
+</script>
+
+
+
+
+<!-- Functions -->
+
+<!-- Declare a function called someName that takes
+two arguments: numberOne and otherNumber
+return the sum of numberOne, 10, and otherNumber -->
+<!-- call your new function, giving it 2 argument values
+log the result to the console 
+Calling a function is also known as "invoking" it-->
+
+<script>
+function addNumbers(numberOne, otherNumber){   
+	return numberOne + 10 + otherNumber; 
+} 
+console.log(addNumbers(4, 10)); 
+console.log(addNumbers(1, 7)); 
+</script>
+
+
+<script>
+function addAndSubtract(numberOne, numberTwo, numberThree){   
+	return numberOne + numberTwo - numberThree; 
+} 
+console.log(addAndSubtract(10, 20, 7)); 
+</script>
+
+
+<script>
+function alertName(somePersonsName){
+return alert(somePersonsName);
+}
+alertName("Zach");
+</script>
+
+
+<!-- Declare a function that takes a name as an argument and tells the user what name they've entered, invoke it after it has been declared -->
+<script>
+function hiThere(name) {
+return alert("hi there " + name);
+}
+hiThere("Ziggy");
+hiThere("Sunny");
+</script>
+
+
+<!-- Declare a function that takes no arguments but prints something to
+the console, invoke it after it has been declared -->
+<script>
+function saySomething() {
+return console.log("this is something");
+}
+
+saySomething();
+saySomething();
+saySomething();
+</script>
+
+
+
+<!-- Declare a function that, depending upon which virtual "door" was
+entered, tells the user they've received a different "prize" in an alert. Run it after it has been declared a few times with each door option -->
+
+<script>
+function openDoor(doorNumber){
+
+if(doorNumber===1){
+	return alert ("you've won a new car!");
+}else if(doorNumber===2){
+	return alert ("you've won a blender!");
+}else if (doorNumber===3){
+	return alert ("you've won a million dollars!");
+}else {
+	return alert ("you lost! try again");
+}
+
+}
+openDoor(2);
+openDoor(3);
+openDoor(1);
+openDoor(5);
+</script>
+
+
+
+  
+
+
+
+
+
+<script src="lesson5.js"></script>
+
+  </body>
+</html>
